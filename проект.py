@@ -490,7 +490,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(math.atan(float(self.showed_number)))
             else:
-                self.showed_number = str(math.atan(math.degrees(float(self.showed_number))))
+                self.showed_number = str(math.atan(math.radians(float(self.showed_number))))
             self.display()
         except Exception:
             self.error()
@@ -500,7 +500,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(math.acos(float(self.showed_number)))
             else:
-                self.showed_number = str(math.acos(math.degrees(float(self.showed_number))))
+                self.showed_number = str(math.acos(math.radians(float(self.showed_number))))
             self.display()
         except Exception:
             self.error()
@@ -510,7 +510,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(math.asin(float(self.showed_number)))
             else:
-                self.showed_number = str(math.asin(math.degrees(float(self.showed_number))))
+                self.showed_number = str(math.asin(math.radians(float(self.showed_number))))
             self.display()
         except Exception:
             self.error()
@@ -520,7 +520,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(math.tan(float(self.showed_number)))
             else:
-                self.showed_number = str(math.tan(math.degrees(float(self.showed_number))))
+                self.showed_number = str(math.tan(math.radians(float(self.showed_number))))
             self.display()
         except Exception:
             self.error()
@@ -530,7 +530,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(1 / math.tan(float(self.showed_number)))
             else:
-                self.showed_number = str(1 / math.tan(math.degrees(float(self.showed_number))))
+                self.showed_number = str(1 / math.tan(math.radians(float(self.showed_number))))
             self.display()
         except Exception:
             self.error()
@@ -541,7 +541,7 @@ class Calculator(QMainWindow, Ui_MainWindow):
             if self.degrees_radians == 'radians':
                 self.showed_number = str(eval(sender.text() + '(' + self.showed_number + ')'))
             else:
-                self.showed_number = str(math.degrees(float(self.showed_number)))
+                self.showed_number = str(math.radians(float(self.showed_number)))
                 self.showed_number = str(eval(sender.text() + '(' + self.showed_number + ')'))
             self.display()
         except Exception:
